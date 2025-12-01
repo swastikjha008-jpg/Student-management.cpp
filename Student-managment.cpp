@@ -10,7 +10,6 @@ struct Student {
     int age;
 };
 
-// ------------------------ Save Student ------------------------
 void saveStudent(const Student &s) {
     ofstream file("students.txt", ios::app);
     if (file) {
@@ -22,7 +21,6 @@ void saveStudent(const Student &s) {
     file.close();
 }
 
-// ------------------------ Add Student ------------------------
 void addStudent() {
     Student s;
     cout << "\nEnter Roll Number: ";
@@ -42,7 +40,6 @@ void addStudent() {
     cout << "✔ Student added successfully!\n";
 }
 
-// ------------------------ Display Students ------------------------
 void displayStudents() {
     ifstream file("students.txt");
     if (!file) {
@@ -67,7 +64,6 @@ void displayStudents() {
     file.close();
 }
 
-// ------------------------ Search Student ------------------------
 void searchStudent() {
     int rollToSearch;
     cout << "\nEnter Roll Number to search: ";
@@ -104,7 +100,6 @@ void searchStudent() {
     file.close();
 }
 
-// ------------------------ Delete Student ------------------------
 void deleteStudent() {
     int rollToDelete;
     cout << "\nEnter Roll to delete: ";
@@ -146,7 +141,6 @@ void deleteStudent() {
         cout << "✘ Student not found.\n";
 }
 
-// ------------------------ Update Student ------------------------
 void updateStudent() {
     int rollToUpdate;
     cout << "\nEnter Roll to update: ";
@@ -204,7 +198,6 @@ void updateStudent() {
         cout << "✘ Student not found.\n";
 }
 
-// ------------------------ Main Menu ------------------------
 int main() {
     int choice;
 
@@ -233,3 +226,4 @@ int main() {
 
     return 0;
 }
+
